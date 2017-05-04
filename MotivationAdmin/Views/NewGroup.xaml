@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MotivationAdmin.Views.NewGroup">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Add Group:" VerticalOptions="Center" Margin="25,0,0,0"/>
+            <Entry Placeholder="Group Name" x:Name="newGroupChat"/>
+        </StackLayout>
+        <Button Text="Add Group" Clicked="AddGroup"/>
+        <Label x:Name="notFound" FontSize="Large" IsVisible="False" Text="Group name must not be empty." TextColor="Red"/>
+    </StackLayout>
+    
+</ContentPage>

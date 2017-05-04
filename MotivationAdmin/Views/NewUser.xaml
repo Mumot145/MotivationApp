@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasBackButton="True"
+             x:Class="MotivationAdmin.Views.NewUser"
+             Title="Adding New Group Member">
+    <StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Add Member:" VerticalOptions="Center" Margin="25,0,0,0"/>
+        <Entry Placeholder="First and Last Name" x:Name="newGroupMember"/>  
+    </StackLayout>
+        <Label TextColor="Red" Text="WARNING: First and Last name must be spelled correctly." HorizontalOptions="Center"/>
+        <Button Text="Add Member" Clicked="AddMember"/>
+        <Label x:Name="notFound" FontSize="Large" IsVisible="False" Text="Sorry that name is not able to be found." TextColor="Red"/>
+    </StackLayout>
+    
+    
+    
+</ContentPage>

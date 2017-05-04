@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MotivationAdmin.GroupDetails"
+            NavigationPage.HasBackButton="True"
+             Title="{Binding GroupName}">
+
+    <ContentPage Title="Group Members">
+        
+        <StackLayout>
+      <Label Text="{Binding GroupName}"  HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Margin="5" />
+      <ListView x:Name="userList" 
+                ItemsSource="{Binding UserList}"
+                Refreshing="OnRefresh"
+			    IsPullToRefreshEnabled="true" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+            <TextCell Text="{Binding Name}">
+                <TextCell.ContextActions>
+                    <MenuItem Text="Delete" CommandParameter="{Binding .}" Clicked="OnDelete" IsDestructive="True"/>
+                    <!--Clicked="OnComplete"-->
+                </TextCell.ContextActions>
+            </TextCell> 
+            </DataTemplate>
+        </ListView.ItemTemplate>
+         </ListView>
+    </StackLayout>
+  </ContentPage>
+
+</TabbedPage>
